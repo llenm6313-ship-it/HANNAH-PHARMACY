@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANNAH PHARMACY - Dawa za Uhakika, Huduma ya Upendo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div></div> 
+            
+            <div class="dot-menu-container">
+                <button class="dot-menu-btn" id="dotMenuBtn">&#8942;</button>
+                <div id="navDropdown" class="dropdown-options">
+                    <a href="#">Mwanzo (Home)</a>
+                    <a href="#">Maswali ya Mara kwa Mara (FAQs)</a>
+                    <a href="#">Dawa Zetu (Our Medicines)</a>
+                    <a href="#">Wasiliana Nasi (Contact Us)</a>
+                </div>
+            </div>
+        </div>
+        <h1 class="portal-title">HANNAH PHARMACY</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="top-action-block">
+            <h2>AGIZA DAWA HARAKA / TUMA CHETI CHA DAKTARI</h2>
+            <small style="color: rgba(255, 255, 255, 0.9);">Weka oda yako ya dawa au tuma picha ya cheti cha daktari hapa upate huduma haraka.</small>
+        </div>
+
+        <div class="content-layout">
+            <aside class="sidebar">
+                <div class="sidebar-menu">
+                    <h3>Menyu</h3>
+                    <ul>
+                        <li id="menu-dashboard">Akaunti Yangu <small>(Oda za hivi karibuni)</small></li>
+                        <li id="menu-account">Taarifa Binafsi <small>(Anwani ya uwasilishaji)</small></li>
+                        <li id="menu-catalog">Angalia Dawa <small>(Aina mbalimbali za dawa)</small></li>
+                        <li id="menu-prescription">Tuma Cheti cha Daktari <small>(Kupata dawa za cheti)</small></li>
+                        <li id="menu-supplements">Vitamin & Virutubisho <small>(Oda za jumla na rejareja)</small></li>
+                        <li id="menu-contact">Msaada & Mawasiliano <small>(Chat au Utupigie simu)</small></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="main-card">
+                
+                <div id="catalog-content" class="page-content-section">
+                    <h2>💊 Vinjari Vitengo vya Dawa</h2>
+                    <div class="form-group">
+                        <label for="category-select">Chagua Kundi la Dawa:</label>
+                        <select id="category-select">
+                            <option>-- Chagua Kundi --</option>
+                            <option>Dawa za Maumivu & Homa (Painkillers)</option>
+                            <option>Antibiotics (Inahitaji Cheti)</option>
+                            <option>Dawa za Presha & Kisukari</option>
+                            <option>Dawa za Kikohozi & Mafua</option>
+                            <option>Huduma za Watoto</option>
+                        </select>
+                    </div>
+
+                    <div class="data-box">
+                        <h4>Mifano ya Dawa Zinazopatikana</h4>
+                        <ul>
+                            <li><strong>Maumivu & Homa:</strong> Paracetamol, Ibuprofen, Diclofenac Gel.</li>
+                            <li><strong>Kikohozi & Mafua:</strong> Cetirizine, Fluticasone Nasal Spray, Cough Syrups.</li>
+                            <li><strong>Vifaa vya Kinga:</strong> Vitakasa mikono (Sanitizers), Mask za Uso, First Aid Kit.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="prescription-content" class="page-content-section">
+                    <h2>📄 Tuma Cheti cha Daktari (Prescription)</h2>
+                    <p>Pakia picha ya cheti chako safi kilichopigwa picha vizuri ili wafamasia wetu wakitathmini na kukuandalia dawa zako.</p>
+
+                    <div class="form-group">
+                        <label for="doctor-name">Jina la Hospitali / Daktari:</label>
+                        <input type="text" id="doctor-name" placeholder="Mf. Hospitali ya Taifa Muhimbili" />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="file-upload">Pakia Picha ya Cheti (Upeo 5MB):</label>
+                        <input type="file" id="file-upload" accept="image/*,application/pdf" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Maelezo ya Ziada / Maoni yako:</label>
+                        <textarea id="notes" rows="4" placeholder="Mf. Naomba pia niongezewe na dawa ya vidonda vya tumbo ikiwa haipo kwenye cheti..."></textarea>
+                    </div>
+                    
+                    <button class="btn-primary">Tuma Cheti Sasa</button>
+                </div>
+                
+                <div id="dashboard-content" class="page-content-section">
+                    <h2>📦 Muhtasari wa Akaunti</h2>
+                    <p>Karibu tena kwenye mfumo wa Hannah Pharmacy. Hapa kuna muhtasari wa oda zako:</p>
+                    <div class="data-box">
+                        <h4>Oda za Hivi Karibuni</h4>
+                        <ul>
+                            <li><strong>Oda #HP9942:</strong> Amoxicillin Caps & Multivitamin - <span style="color: #16a34a; font-weight: bold;">Imewasilishwa</span> (2026-05-10)</li>
+                            <li><strong>Oda #HP9959:</strong> Panadol Advance (Paketi 2) - <span style="color: #d97706; font-weight: bold;">Inasafirishwa</span> (Inatarajiwa Leo)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="account-content" class="page-content-section">
+                    <h2>👤 Taarifa Binafsi & Anwani</h2>
+                    <div class="form-group">
+                        <label>Jina Kamili la Mgonjwa / Mteja:</label>
+                        <input type="text" value="Jane Mbunda" disabled style="background-color: #f3f4f6; cursor: not-allowed;" />
+                    </div>
+                    <div class="form-group">
+                        <label>Anwani ya Kupelekewa Dawa (Nyumbani/Ofisini):</label>
+                        <textarea rows="2">Kijitonyama, Barabara ya Ali Hassan Mwinyi, Dar es Salaam, Tanzania</textarea>
+                    </div>
+                    <button class="btn-secondary">Hifadhi Mabadiliko</button>
+                </div>
+
+                <div id="supplements-content" class="page-content-section">
+                    <h2>🌿 Vitamin, Virutubisho & Oda za Jumla</h2>
+                    <p>Boresha afya yako kwa kupata virutubisho bora na vitamin vya kuongeza kinga ya mwili.</p>
+                    <div class="form-group">
+                        <label>Chagua Kirutubisho unachohitaji:</label>
+                        <select>
+                            <option>Vitamin C 1000mg (Vidonge vya Kuyeyusha)</option>
+                            <option>Zinc & Magnesium Supplements</option>
+                            <option>Cod Liver Oil (Mafuta ya Samaki - Vidonge)</option>
+                            <option>Pregnacare (Kwa akina mama wajawazito)</option>
+                        </select>
+                    </div>
+                    <p><small>Kama unahitaji dawa ya jumla kwa ajili ya taasisi au duka lingine ndogo, tafadhali tumia sehemu ya <strong>AGIZA DAWA HARAKA</strong> hapo juu.</small></p>
+                </div>
+
+                <div id="contact-content" class="page-content-section">
+                    <h2>📞 Wasiliana na Hannah Pharmacy</h2>
+                    <p>Je, unahitaji ushauri wa kifamasia au una swali? Tuko hapa kukusaidia:</p>
+                    <div class="data-box">
+                        <h4>Maelezo ya Mawasiliano</h4>
+                        <ul>
+                            <li><strong>Simu / WhatsApp:</strong> +255 7XX XXX XXX (Saa 24/7 kwa dharura)</li>
+                            <li><strong>Barua Pepe:</strong> info@hannahpharmacy.com</li>
+                            <li><strong>Mahali Tulipo:</strong> Posta Mpya, Dar es Salaam (Karibu na Sanamu ya Samora)</li>
+                        </ul>
+                    </div>
+                    <p>Au jaza fomu hii fupi chini kukatumiwa ujumbe vya haraka:</p>
+                    <div class="form-group">
+                        <label>Ujumbe/Swali Lako:</label>
+                        <textarea rows="3" placeholder="Andika hapa..."></textarea>
+                    </div>
+                    <button class="btn-primary">Tuma Ujumbe</button>
+                </div>
+
+            </section>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
