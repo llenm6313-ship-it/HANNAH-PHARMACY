@@ -1,226 +1,200 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
-    background-color: #f0fdf4; /* Kijani laini ya hospitali */
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0fdf4;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
 .header {
     background: linear-gradient(to right, #0f766e, #115e59);
-    color: #ffffff;
-    padding: 20px 50px;
-    position: relative;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-.header-container {
-    display: flex; 
-    justify-content: space-between; 
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-/* Mitindo ya Kitufe cha Nukta Tatu na Dropdown */
-.dot-menu-container {
-    position: relative;
-    display: inline-block;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
-.dot-menu-btn {
-    background: none;
-    border: none;
-    color: #ccfbf1;
-    font-size: 30px;
-    font-weight: bold;
+
+.logo-icon {
+    font-size: 42px;
+}
+
+.logo h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Top Banner */
+.top-banner {
+    background: linear-gradient(to right, #059669, #10b981);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    text-align: center;
+}
+
+/* Content Layout */
+.content-wrapper {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    width: 280px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    height: fit-content;
+}
+
+.sidebar-header {
+    background: #0f766e;
+    color: white;
+    padding: 18px;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.sidebar-menu li {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     cursor: pointer;
-    padding: 0 10px;
-    line-height: 1;
-    transition: color 0.2s;
+    border-bottom: 1px solid #f1f5f9;
 }
-.dot-menu-btn:hover {
-    color: #ffffff;
-}
-.dropdown-options {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 40px;
-    background-color: #ffffff;
-    min-width: 220px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    z-index: 1000;
-    overflow: hidden;
-    border: 1px solid #e5e7eb;
-}
-.dropdown-options a {
-    color: #1f2937;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 15px;
-    font-weight: 500;
-    transition: background-color 0.2s;
-}
-.dropdown-options a:hover {
-    background-color: #f3f4f6;
+
+.sidebar-menu li:hover {
+    background: #ecfdf5;
     color: #0f766e;
 }
-.show {
+
+.sidebar-menu li.active {
+    background: #f0fdf4;
+    color: #0f766e;
+    font-weight: 600;
+}
+
+.main-content {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    min-height: 600px;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
     display: block;
 }
 
-.portal-title {
-    text-align: center;
-    font-size: 38px;
-    margin: 10px 0 0 0;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-.main-container {
-    padding: 20px 50px;
-}
-.top-action-block {
-    background: linear-gradient(to right, #059669, #34d399);
-    color: #ffffff;
+/* Cards & Forms */
+.card, .medicine-card {
+    background: #f8fafc;
     padding: 20px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
-.top-action-block h2 {
-    margin: 0 0 5px 0;
-    font-size: 20px;
-    font-weight: bold;
-}
-.content-layout {
-    display: flex;
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
-.sidebar {
-    flex: 0 0 280px;
-    background-color: #ccfbf1;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    align-self: flex-start;
+
+.form-group {
+    margin-bottom: 20px;
 }
-.sidebar-menu h3 {
-    background-color: #0f766e;
-    color: #ffffff;
-    padding: 15px;
-    margin: 0;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    font-size: 22px;
-    text-align: center;
-}
-.sidebar-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.sidebar-menu li {
-    padding: 15px 20px;
-    cursor: pointer;
-    color: #111827;
-    border-bottom: 1px solid rgba(15, 118, 110, 0.2);
-    transition: all 0.2s ease;
-}
-.sidebar-menu li small {
-    display: block;
-    color: #4b5563;
-    margin-top: 3px;
-}
-.sidebar-menu li:hover {
-    background-color: #99f6e4;
-    color: #042f2e;
-}
-.sidebar-menu li.active {
-    background-color: #ffffff;
-    color: #0f766e;
-    font-weight: bold;
-    border-left: 5px solid #0f766e;
-}
-.main-card {
-    flex-grow: 1;
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    min-height: 400px;
-}
-.main-card h2 {
-    font-size: 24px;
-    color: #0f766e;
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 10px;
-    margin-top: 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    font-weight: bold;
+    font-weight: 600;
     color: #374151;
-    font-size: 14px;
-}
-.form-group select, .form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #d1d5db;
-    border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box;
-    margin-bottom: 15px;
-}
-.data-box {
-    border: 1px solid #e5e7eb;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #f9fafb;
-    margin-top: 15px;
-}
-.data-box h4 {
-    color: #0f766e;
-    margin-top: 0;
-    border-bottom: 1px dashed #cbd5e1;
-    padding-bottom: 5px;
-}
-.data-box ul {
-    list-style-type: square;
-    padding-left: 20px;
-    margin: 10px 0;
-}
-.data-box li {
-    padding: 5px 0;
-    font-size: 14px;
-    color: #374151;
-}
-.btn-primary {
-    background-color: #0f766e; 
-    color: white; 
-    padding: 12px 24px; 
-    border: none; 
-    border-radius: 4px; 
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background 0.2s;
-}
-.btn-primary:hover {
-    background-color: #115e59;
-}
-.btn-secondary {
-    background-color: #059669; 
-    color: white; 
-    padding: 12px 24px; 
-    border: none; 
-    border-radius: 4px; 
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background 0.2s;
-}
-.btn-secondary:hover {
-    background-color: #047857;
 }
 
-.page-content-section {
-    display: none; 
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 14px 32px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background: #0f766e;
+    color: white;
+}
+
+.btn-secondary {
+    background: #10b981;
+    color: white;
+}
+
+/* Dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    width: 220px;
+    z-index: 1000;
+}
+
+.dropdown a {
+    display: block;
+    padding: 14px 20px;
+    color: #1f2937;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background: #f3f4f6;
 }
